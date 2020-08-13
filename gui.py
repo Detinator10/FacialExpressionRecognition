@@ -40,13 +40,14 @@ show_text = [0]
 
 
 def show_vid():
+    print('1')
     cap1 = cv2.VideoCapture(0)
     if not cap1.isOpened():
         print("cant open the camera1")
     flag1, frame1 = cap1.read()
     frame1 = cv2.resize(frame1, (600, 500))
     bounding_box = cv2.CascadeClassifier(
-        '/Users/detle/PycharmProjects/FacialExpressionRecognition/venv/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml')
+        './venv/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml')
     gray_frame = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
     num_faces = bounding_box.detectMultiScale(gray_frame, scaleFactor=1.3, minNeighbors=5)
     for (x, y, w, h) in num_faces:
@@ -75,6 +76,7 @@ def show_vid():
 
 
 def show_vid2():
+    print('2')
     frame2 = cv2.imread(emoji_dist[show_text[0]])
     pic2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2RGB)
     img2 = Image.fromarray(frame2)
