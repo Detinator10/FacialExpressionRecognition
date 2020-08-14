@@ -16,7 +16,8 @@ train_datagen = ImageDataGenerator(rescale=1./255,
     horizontal_flip = True,
     width_shift_range=0.1,
     height_shift_range=0.1,
-    fill_mode = 'nearest')
+    fill_mode = 'nearest',
+    brightness_range=[0.2, 1.5])
 
 val_datagen = ImageDataGenerator(rescale=1./255)
 train_generator = train_datagen.flow_from_directory(
