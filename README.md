@@ -14,4 +14,4 @@ If you would like to train the algorithm yourself, you may run the train.py file
 
 ## Performance Metrics
 
-This project is currently in development, but once I have finished I will update this with the final performance metrics for the program.
+With original model/data, the algorithm obtained close to 52% accuracy. Through data augmentation and other updates, performance has improved to ~68%.
